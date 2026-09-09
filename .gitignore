@@ -1,0 +1,5 @@
+# Temporary AI-agent state and task workspaces
+.ai/scratch/
+.ai/cache/
+.ai/logs/
+.work/
