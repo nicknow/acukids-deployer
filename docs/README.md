@@ -26,6 +26,9 @@ knowledge.
 - [Future development architecture](future-development-architecture.md)
   records the planned control-plane, parent UI, local homepage, and update
   direction.
+- [Future distro development plan](future-development-distro.md) gives the
+  phased roadmap for the custom child session, acuKids timekeeper, parent UI,
+  installable ISO, updates, and recovery.
 - [Deployment guide](../DEPLOYMENT_GUIDE.md) is the complete operator runbook.
 - [Quick reference](../QUICK_REFERENCE.md) is the day-to-day administrator
   command card.

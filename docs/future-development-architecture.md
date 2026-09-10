@@ -76,7 +76,7 @@ LAN exposure. The service should:
 - never log passwords, PINs, or tokens.
 
 The UI must not independently edit `/etc`, accounts, Firefox policy, dconf,
-DNS, or timekpr. Its boundary is:
+DNS, or timekeeping state. Its boundary is:
 
 ```text
 Parent UI -> local API -> validated configuration transaction -> apply engine
@@ -133,37 +133,11 @@ changes such as Firefox or timekpr updates require VM validation before release.
 
 ## Implementation phases
 
-### Phase 1 — Stabilize boundaries
-
-- Keep the current installer and generated repository working.
-- Consolidate validation and apply behavior behind explicit operations.
-- Record component versions, origins, health results, and migrations.
-- Expand host-safe and disposable-VM coverage.
-
-### Phase 2 — Local parent management
-
-- Implement a loopback/Unix-socket API.
-- Add preview, confirmation, apply, and rollback operations.
-- Build the parent UI for accounts, sites, apps, time limits, and visibility.
-- Keep the existing CLI as a supported recovery path.
-
-### Phase 3 — Local homepage service
-
-- Serve the child homepage over loopback HTTP.
-- Update Firefox policy and first-run behavior.
-- Verify startup ordering and child-session isolation in a VM.
-
-### Phase 4 — Managed updates
-
-- Define signed release metadata and update channels.
-- Add staged updates, health checks, rollback, and owner approval.
-- Exercise upgrades from representative older deployments.
-
-### Phase 5 — Modular expansion
-
-Add new features as modules with explicit configuration and recovery contracts.
-Do not split services further unless the resulting isolation materially improves
-reliability, security, or maintainability.
+The detailed phased roadmap is maintained in
+[future-development-distro.md](future-development-distro.md). It prototypes the
+child session before ISO engineering, commits to an acuKids-owned timekeeper,
+then adds the parent control plane and one-shot ISO after component boundaries
+and hardware requirements are known.
 
 ## Non-goals for the near term
 
