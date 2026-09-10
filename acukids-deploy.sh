@@ -34,7 +34,7 @@ DCONF_PROFILE_NAME="acukids-child"
 SCRIPT_VERSION="0.8-beta"
 # Increment for every change to this installer. This integer is printed at
 # startup and recorded in the generated control-repository metadata.
-SCRIPT_BUILD=27
+SCRIPT_BUILD=28
 CONTROL_SCHEMA_VERSION=1
 ACUKIDS_ASSET_BASE_URL="${ACUKIDS_ASSET_BASE_URL:-https://raw.githubusercontent.com/nicknow/acukids-deployer/main}"
 ACUKIDS_LOGO_SHA256="c8cfd01b5b179e8d9bb28de739be80bd83a37201ea1ff7fa99a72c1dbf6e1b78"
@@ -92,6 +92,7 @@ WHITELIST_APPS_DEFAULT=(
   "org.kde.krita.desktop"
   "audacity.desktop"
   "org.stellarium.Stellarium.desktop"
+  "org.kde.kturtle.desktop"
   "org.gnome.Firefox.desktop"
   "firefox.desktop"
   "org.gnome.Nautilus.desktop"
@@ -111,6 +112,7 @@ EDU_PACKAGES=(
   krita
   audacity
   stellarium
+  kturtle
 )
 
 BASE_PACKAGES=(
@@ -700,7 +702,7 @@ DONE_DESKTOP_EOF
 # inspects what each installed package actually shipped via `dpkg -L` and
 # builds the real whitelist from that. This keeps the app lockdown correct
 # even if upstream renames a .desktop file again in a future release.
-APP_DISCOVERY_PACKAGES=(gcompris-qt tuxpaint tuxmath tuxtype krita audacity stellarium)
+APP_DISCOVERY_PACKAGES=(gcompris-qt tuxpaint tuxmath tuxtype krita audacity stellarium kturtle)
 
 discover_app_desktop_files() {
   WHITELIST_APPS_RUNTIME=()

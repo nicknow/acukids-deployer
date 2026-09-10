@@ -57,6 +57,7 @@ this machine.
 - Tux Math - arithmetic practice
 - Tux Type - typing practice
 - Stellarium - explore stars and planets
+- KTurtle - learn programming with turtle graphics
 - Krita - digital art (more advanced)
 - Audacity - record and play with sound
 

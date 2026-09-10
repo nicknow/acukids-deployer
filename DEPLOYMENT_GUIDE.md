@@ -14,7 +14,7 @@ Edubuntu packages.
 | Admin account | New dedicated account you create during setup, full sudo |
 | Original installer account | Kept as a fallback login, auto-login disabled, not used day-to-day |
 | Child accounts | As many as you want, each with a 4-digit PIN login |
-| Educational software | GCompris, TuxPaint, TuxMath, TuxType, Krita, Audacity, Stellarium |
+| Educational software | GCompris, TuxPaint, TuxMath, TuxType, Krita, Audacity, Stellarium, KTurtle |
 | Web filtering | Cloudflare for Families DNS (blocks malware + adult content) |
 | Browser (children) | Firefox (.deb), locked to a strict whitelist of approved educational sites |
 | Browser (admin) | Chromium (snap), unrestricted, for the admin's own use |
